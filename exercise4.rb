@@ -1,11 +1,13 @@
 count = (1..100)
 
-if count = count / 3 == 0
-	puts "Bit"
-	elseif count = count / 5 == 0
-	puts "Maker"
-	elseif count = count / 5 == 0 && count / 3 == 0
-	puts "Bitmaker"
+count.each do |x|
+	if x.remainder(3) == 0
+		puts "Bit"
+	elsif x.remainder(5) == 0
+		puts "Maker"
+	elsif x.remainder(15) == 0
+		puts "Bitmaker"
 	else
-	puts "#{count}"
-	end	
+		puts "#{x}"
+	end
+end
